@@ -1,0 +1,293 @@
+@charset "UTF-8";
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+リセット
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-size: 100%;
+    font-weight: normal;
+}
+body{
+    padding-top: 50px;
+    counter-reset: number 0;
+    color: #494747;
+    background: #fafafa;
+    line-height: 1.8;
+
+}
+
+a{
+    color: #494747;
+    text-decoration: none;
+    transition: 0.3s;
+}
+a:link,
+a:hover,
+a:active,
+a:focus{
+    color: #494747;
+}
+a:hover{
+    opacity: 0.6;;
+}
+
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+記事ページ 
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+article{
+    /* background: #ddd; */
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+
+}
+
+article h1{
+    font-size: 22px;
+    font-weight: bold;
+}
+article h2{
+    font-size: 20px;
+    font-weight: bold;
+}
+article h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+article p{
+    font-size: 16px;
+    margin-bottom: 1em;
+}
+
+article ul{
+    font-size: 14px;
+}
+article ul li:before{
+    content: "・";
+    padding-right: 0.5em;
+}
+
+article ol{
+    font-size: 14px;
+}
+article ol li:before{
+    content: ".";
+    counter-increment: number 1;
+    content: counter(number)".";
+    padding-right: 0.5em;
+}
+
+article table{
+    width: 100%;
+    border-spacing: 0;
+    font-size: 13px;
+}
+article table th,
+article table td{
+    border-bottom: solid 1px #888;
+    padding: 5px 10px;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+about_footer.php
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+.about_footer{
+    background: #fff0e5;
+    width: 100%;
+
+}
+
+.about_footer .inner{
+    max-width: 500px;
+    margin: auto;
+    padding: 10px;
+    font-size: 14px;
+}
+.about_footer .inner .profile .img_box img{
+    width: 100%;
+}
+/* SNSリンク */
+.about_footer .inner ul.sns{
+    display: flex;
+    flex-wrap: wrap;
+}
+.about_footer .inner ul.sns li{
+    width: 50%;
+}
+.about_footer .inner ul.sns li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about_footer .inner ul.sns li a img{
+    height: 20px;
+    margin-right: 0.5em;
+}
+
+/* タグリンク */
+.about_footer .inner .tag ul li{
+    display: inline;
+}
+.about_footer .inner .tag ul li:after{
+    content: "/";
+    padding-left: 0.2em;
+}
+.about_footer .inner .tag ul li:last-child:after{
+    display: none;
+}
+
+
+header{
+    background: #dddddd;
+}
+
+header .header_nav{
+    width: 100%;
+    height: 50px;
+    background: #fafafa;
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+}
+header .header_nav .logo a img{
+    height: 30px;
+   
+}
+header .header_nav .nav_btn {
+ font-size: 30px;
+ color: #100F5E;
+}
+
+
+header .g_nav{
+    width: 100%;
+    height: 100vh;
+    background: #E5E5E5;
+    position: fixed;
+    transition: 0.3s;
+    opacity: 0;
+    top: 5vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+
+}
+header .g_nav .close_btn{
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 30px;
+ color: #100F5E;
+}
+
+header .g_nav ul{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+header .g_nav ul li{
+    width: 50%;
+    padding: 5px;
+}
+header .g_nav ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    background: #dddd22;
+    font-size: 12px;
+    font-family: Cormorant Upright;
+}
+header .g_nav ul li:nth-child(1) a{
+    background: #DDDDDD;
+    
+}
+header .g_nav ul li:nth-child(2) a{
+    background: #46B8DF;
+    
+}
+header .g_nav ul li:nth-child(3) a{
+    background: #92C654;
+    
+}
+header .g_nav ul li:nth-child(4) a{
+    background: #E6C035;
+    
+}
+header .g_nav ul li:nth-child(5) a{
+    background: #FF8A65;
+    
+}
+header .g_nav ul li:nth-child(6) a{
+    background: #EC6593;
+    
+}
+header .g_nav ul li:nth-child(7) a{
+    background: #ED92BA;
+    
+}
+header .g_nav ul li:nth-child(8) a{
+    background: #A587E9;
+    
+}
+header .g_nav ul li:nth-child(9) a{
+    background: #C4C4C4;
+    
+}
+header .g_nav ul li:nth-child(10) a{
+    background: #FAD050;
+    
+}
+
+
+
+
+header .g_nav.active{
+ top: 0;
+ opacity: 1;
+  pointer-events: auto;
+
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+about.php
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+.about{
+   background: #F6F3F3;
+    width: 100%; 
+}
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+footer
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+
+footer{
+    background: #494747;
+    text-align: center;
+    height: 20px;
+}
+footer p{
+    color: #fff;
+    font-size: 0.875rem;
+}
